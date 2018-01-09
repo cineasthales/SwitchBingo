@@ -1,0 +1,293 @@
+body {
+    font-family: sans-serif;
+    background-color: #ccf2ff;
+    background-image: url("img/site/consoles.png");
+    background-position: center top;
+}
+
+#tudo {
+    width: 55em;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 1em;
+    opacity: 0.8;
+    padding: 2em;
+}
+
+h3 {
+    text-align: left;
+}
+
+nav {
+    padding: 1em 0 1em 0;
+    border-bottom: 0.1em solid #00ade8;
+}
+
+#intro {
+    border-bottom: 0.1em solid #00ade8;
+    text-align: justify;
+}
+
+.taxado {
+    text-decoration: line-through;
+}
+
+.flags {
+    width: 1.5em;
+}
+
+#langs {
+    text-align: right;
+}
+
+a, a:visited {
+    color: #0000b3;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    color: #00ade8;
+    text-decoration: none;
+}
+
+#render {
+    background-color: white;
+}
+
+#imagem {
+    background-image: url("img/site/voidcard.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow-x: auto;
+    height: 37em;
+}
+
+#divTabela {
+    display: none;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+#rightclick {
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
+#confirm {
+    display: none;
+}
+
+#buttons2 {
+    display: none;
+}
+
+#divForm {
+    display: none;
+}
+
+#btok {
+    display: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#divLeft {
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+}
+
+#divRight {
+    width: 50%;
+    display: inline-block;
+    float: right;
+    text-align: left;
+}
+
+table, td, tr, th, td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 0.5em;
+    height: 5em;
+    width: 20%;
+    font-weight: bolder;
+    text-shadow: 0 0 10px white;
+}
+
+#celula12 {
+    padding: 0;
+    height: 0;
+    width: 20%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+th {
+    padding: 0.25em;
+    height: 1em;
+    font-size: 3em;
+    width: 20%;
+}
+
+table {
+    width: 50em;
+    margin: 0 auto;
+}
+
+button {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #0086b3;
+    color: white;
+    font-family: arial;
+    border: 0.1em solid #00394d;
+}
+
+button:hover, button:focus, button:active {
+    background-color: #1ac6ff;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    border-bottom: 0.1em solid #00ade8;
+}
+
+footer {
+    border-top: 0.1em solid #00ade8;
+    padding-top: 2em;
+}
+
+#mensagem {
+    display: none;
+    color: red;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+small {
+    font-size: 0.7em;
+}
+
+#dev, #terms, #share {
+    display: inline-block;
+}
+
+#dev, #share {
+    width: 20%;
+}
+
+#terms {
+    width: 45%;
+}
+
+.navbt, .navbt:visited{
+    background: 0;
+    border: 0;    
+    color: #0000b3;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbt:hover, .navbt:focus, .navbt:active {
+    background: 0;
+    border: 0;
+    color: #00ade8;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/*CONTADOR*/
+
+#count {
+    border-bottom: 0.1em solid #00ade8;
+}
+
+#hCount {
+    text-align: center;
+}
+
+#clockdiv{
+    clear: both;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+#clockdiv > div{
+    display: inline-block;
+    border: 0.1em solid black;
+}
+
+#clockdiv div > span{
+    padding: 0.25em 1em;
+    padding-bottom: 0;
+    display: inline-block;
+}
+
+.smalltext{
+    font-size: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/**/
+
+@media all and (max-width: 60em){
+
+    #imagem {
+        background-position: top left;
+    }
+
+    #tudo {
+        width: 90%;
+        margin: 0;
+        padding: 5%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #divLeft {
+        width: 100%;
+        display: block;
+    }
+
+    #divRight {
+        width: 100%;
+        display: block;
+        float: left;
+    }
+
+    #about {
+        text-align: justify;
+    }
+
+    #dev, #terms, #share {
+        display: block;
+        width: 100%;
+    }
+
+    #imagem {
+        overflow-x: scroll;        
+    }
+
+    #divTabela {
+        overflow-x: scroll;
+    }
+
+    #langs {
+        text-align: center;
+    }
+
+    .flags {
+        width: 2.5em;
+    }
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Nintendo Switch Bingo Generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Generate a bingo card full of Nintendo Switch rumors and share it with your friends!">
+        <meta name="keywords" content="nintendo, switch, bingo">
+        <link rel="shortcut icon" type="image/png" href="img/site/favicon.png"/>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <script src="programa.js"></script>
+        <script src="html2canvas.js"></script>
+        <script type="text/javascript">var switchTo5x = true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "9805003f-bdb7-4ad9-91c7-436189fd45e5", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+    </head>
+    <body>
+        <div id="tudo">
+            <header>
+                <a href="index.html"><img src="img/site/header.png" alt="Website Logo"></a>                
+                <div id="langs">
+                    <a href="index_ptbr.html"><img class="flags" src="img/site/bra.png" alt="Português Brasileiro"></a> <a href="index.html"><img class="flags" src="img/site/usa.gif" alt="English US"></a><br>
+                </div>
+            </header>
+            <nav>
+                <button class="navbt" type="button" onclick="scrollAbout()">About</button>
+                <button class="navbt" type="button" onclick="scrollGen()">Generate</button>
+                <button class="navbt" type="button" onclick="scrollNews()">News</button>
+                <button class="navbt" type="button" onclick="scrollHow()">How to Play</button>
+            </nav>
+            <section id="count">
+                <h3 id="hCount">The Switch event is almost here! Make your cards while you can!</h3>
+                <div id="clockdiv">
+                    <div>
+                        <span class="days"></span>
+                        <div class="smalltext">Days</div>
+                    </div>
+                    <div>
+                        <span class="hours"></span>
+                        <div class="smalltext">Hours</div>
+                    </div>
+                    <div>
+                        <span class="minutes"></span>
+                        <div class="smalltext">Minutes</div>
+                    </div>
+                    <div>
+                        <span class="seconds"></span>
+                        <div class="smalltext">Seconds</div>
+                    </div>
+                </div>
+                <p><b>Note:</b> this website will be closed moments before the event.</p>
+            </section>
+            <section id="intro">
+                <h3 id="hAbout">About</h3>                
+                <p id="about"><b>Welcome!</b>
+                    For the past year or so, the fans and the media heard and talked a lot regarding
+                    Nintendo's next videogame console, code named NX. <b>Now it's officially Nintendo Switch!</b>
+                    The <a href="https://youtu.be/f5uik5fgIaI" target="_blank">first look trailer</a> confirmed a lot of the rumors, but some specs and games
+                    are yet to be revealed. Meanwhile, new reports keep coming. So, what we should or not expect to see on <b>january 12th 2017</b>, the
+                    date of the next Switch presentation? Take your guesses and generate your bingo cards easily!
+                    <br><br>Don’t worry if you can’t see the whole sample card in your mobile device. Just generate your card and scroll it horizontally!
+                    <br><br>Confirmed or disconfirmed options are now disabled. Games shown in the trailer
+                    are considered only demos until an official announcement, so their options are still available.                    
+                    <br><br><b>If you like this site, tell your friends and share your cards in social media! Thanks and have a nice day! :)</b></p>                
+            </section>
+            <section>
+                <h3 id="hGen">Generate</h3>
+            </section>
+            <section id="buttons1">                
+                <button id="random" type="button" onclick="gerar()">Random card</button>
+                <button id="pick" type="button" onclick="escolher()">Let me choose</button><br><br><br>                
+            </section>                        
+            <section id="divForm">
+                <p>You can choose the options, but the order is still random.<br><strong>Please, choose exactly 24 options.</strong></p>                
+                <form id="chooseForm">
+                    <div id="divLeft">
+                        <label><input type="checkbox" id="op1" value="1" disabled><span class='taxado'>Console and handheld hybrid</span></label><br>
+                        <label><input type="checkbox" id="op2" value="2" disabled><span class='taxado'>A very different concept</span></label><br>
+                        <label><input type="checkbox" id="op3" value="3">Compatibility with non-Nintendo devices</label><br>
+                        <label><input type="checkbox" id="op4" value="4">No discs</label><br>
+                        <label><input type="checkbox" id="op5" value="5" disabled><span class='taxado'>Two screens support</span></label><br>
+                        <label><input type="checkbox" id="op6" value="6" disabled><span class='taxado'>Nvidia Tegra chip</span></label><br>
+                        <label><input type="checkbox" id="op7" value="7">No region lock</label><br>
+                        <label><input type="checkbox" id="op8" value="8" disabled><span class='taxado'>Cartridges</span></label><br>
+                        <label><input type="checkbox" id="op9" value="9">Digitally backwards compatible <span style="color:darkgoldenrod">[update]</span></label><br>
+                        <label><input type="checkbox" id="op10" value="10" disabled><span class='taxado'>Amiibo support</span></label><br>
+                        <label><input type="checkbox" id="op11" value="11">4K gaming</label><br>
+                        <label><input type="checkbox" id="op12" value="12">Streaming in 4K</label><br>
+                        <label><input type="checkbox" id="op13" value="13">HDR</label><br>
+                        <label><input type="checkbox" id="op14" value="14">VR compatibility</label><br>
+                        <label><input type="checkbox" id="op15" value="15">AR compatibility</label><br>
+                        <label><input type="checkbox" id="op16" value="16">Achievements or Trophies</label><br>
+                        <label><input type="checkbox" id="op17" value="17">Mobile games emulator included</label><br>
+                        <label><input type="checkbox" id="op18" value="18" disabled><span class='taxado'>Remote play</span></label><br>
+                        <label><input type="checkbox" id="op19" value="19">Miiverse</label><br>
+                        <label><input type="checkbox" id="op20" value="20">Virtual Console</label><br>
+                        <label><input type="checkbox" id="op21" value="21">Nintendo eShop</label><br>
+                        <label><input type="checkbox" id="op22" value="22">Subscription service</label><br>
+                        <label><input type="checkbox" id="op23" value="23" disabled><span class='taxado'>Unreal 4 support</span></label><br>
+                        <label><input type="checkbox" id="op24" value="24" disabled><span class='taxado'>Unity support</span></label><br>
+                        <label><input type="checkbox" id="op25" value="25">GameMaker support</label><br>
+                        <label><input type="checkbox" id="op26" value="26">Virtual buttons in a touch screen</label><br>
+                        <label><input type="checkbox" id="op27" value="27">Force sensitive buttons</label><br>
+                        <label><input type="checkbox" id="op28" value="28" disabled><span class='taxado'>Divided D-Pad</span></label><br>
+                        <label><input type="checkbox" id="op29" value="29">"Share" button</label><br>
+                        <label><input type="checkbox" id="op30" value="30" disabled><span class='taxado'>Detachable motion controllers</span></label><br>
+                        <label><input type="checkbox" id="op31" value="31">Exchangeable button groups</label><br>
+                        <label><input type="checkbox" id="op32" value="32" disabled><span class='taxado'>Standard controller option</span></label><br>
+                        <label><input type="checkbox" id="op33" value="33">Bayonetta series port</label><br>
+                        <label><input type="checkbox" id="op34" value="34">Super Smash Bros 4 port or new game</label><br>
+                        <label><input type="checkbox" id="op35" value="35">Splatoon port or new game</label><br>
+                        <label><input type="checkbox" id="op36" value="36">Super Mario Maker port</label><br>
+                        <label><input type="checkbox" id="op37" value="37">A new IP</label><br>
+                        <label><input type="checkbox" id="op38" value="38">New 3D Mario game</label><br>
+                        <label><input type="checkbox" id="op39" value="39">New Pokémon game</label><br>
+                        <label><input type="checkbox" id="op40" value="40">New Luigi's Mansion game</label><br>
+                        <label><input type="checkbox" id="op41" value="41">New Yoshi game</label><br>
+                        <label><input type="checkbox" id="op42" value="42">New Kirby game</label><br>
+                        <label><input type="checkbox" id="op43" value="43">New Donkey Kong game</label><br>
+                    </div>
+                    <div id="divRight">                     
+                        <label><input type="checkbox" id="op44" value="44">New Fire Emblem game</label><br>
+                        <label><input type="checkbox" id="op45" value="45">New Wario game</label><br>
+                        <label><input type="checkbox" id="op46" value="46">New Metroid game</label><br>
+                        <label><input type="checkbox" id="op47" value="47">New F-Zero game</label><br>
+                        <label><input type="checkbox" id="op48" value="48">New Pikmin game</label><br>
+                        <label><input type="checkbox" id="op49" value="49">New Advance/Battalion Wars game</label><br>
+                        <label><input type="checkbox" id="op50" value="50">New Golden Sun game</label><br>
+                        <label><input type="checkbox" id="op51" value="51">New Kid Icarus game</label><br>
+                        <label><input type="checkbox" id="op52" value="52">New Xenoblade Chronicles game</label><br>                        
+                        <label><input type="checkbox" id="op53" value="53">A new Platinum game or sequel</label><br>
+                        <label><input type="checkbox" id="op54" value="54">Exclusive features in the new Zelda</label><br>
+                        <label><input type="checkbox" id="op55" value="55">Mother 3 localization</label><br>
+                        <label><input type="checkbox" id="op56" value="56">Sega game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op57" value="57">Ubisoft game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op58" value="58">Bandai Namco game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op59" value="59">Square-Enix game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op60" value="60">Capcom game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op61" value="61">WB game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op62" value="62">2K game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op63" value="63">EA game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op64" value="64">Bethesda game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op65" value="65">Activision game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op66" value="66">Konami game(s) announcement</label><br>
+                        <label><input type="checkbox" id="op67" value="67">Built in projector <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op68" value="68">Joy-con has a pointer <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op69" value="69">Mario Kart 8 port or new game <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op70" value="70">USB-C cord to charge <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op71" value="71">4Gb RAM <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op72" value="72">16Gb std cartridges capacity <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op73" value="73">No headphone jack on the Pro Controller <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op74" value="74">6.2'' 720p multitouch screen <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op75" value="75">No external drives support <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op76" value="76">MicroSD up to 128Gb support <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op77" value="77">Joycon grip sold separately <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op78" value="78">Analog triggers <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op79" value="79">3 hours of battery life <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op80" value="80">Screenshots / Video record <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op81" value="81">Launch price US$ 300.00 or less <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op82" value="82">Wii Remote and accessories compatible <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op83" value="83">Wii U Pro Controller compatible <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op84" value="84">Gamecube Adapter compatible <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op85" value="85">Mario & Rabbids crossover <span style="color:darkgreen">[new]</span></label><br>
+                        <label><input type="checkbox" id="op86" value="86">Pokkén port or new game <span style="color:darkgreen">[new]</span></label><br>
+                    </div>                    
+                </form>                
+                <div id="btform">
+                    <br><button type="button" onclick="conferir()">Ok!</button> <button id="new" type="button" onclick="novo()">Cancel</button><br><br>
+                </div>                
+            </section>
+            <section id="confirm">
+                <br><button type="button" onclick="gerarEscolhidos()">Generate!</button> <button id="new" type="button" onclick="cancelar()">Back</button><br><br>
+            </section> 
+            <section>
+                <p id="mensagem"></p>
+            </section>
+            <section id="rightclick">
+            </section>       
+            <section id="imagem">
+            </section>
+            <section id="buttons2">
+                <br><br><button type="button" onclick="download()">Download</button> <button id="new" type="button" onclick="novo()">Generate new card</button><br>         
+            </section><br><br>
+            <main>
+                <section id="divTabela">
+                    <table id="render">
+                        <tr>
+                            <th>B</th>             
+                            <th>I</th>
+                            <th>N</th>
+                            <th>G</th>
+                            <th>O</th>
+                        </tr>
+                        <tr>
+                            <td id="celula0">?</td>
+                            <td id="celula1">?</td>
+                            <td id="celula2">?</td>
+                            <td id="celula3">?</td>
+                            <td id="celula4">?</td>
+                        </tr>
+                        <tr>
+                            <td id="celula5">?</td>
+                            <td id="celula6">?</td>
+                            <td id="celula7">?</td>
+                            <td id="celula8">?</td>
+                            <td id="celula9">?</td>
+                        </tr>
+                        <tr>
+                            <td id="celula10">?</td>
+                            <td id="celula11">?</td>
+                            <td id="celula12">FREE<br>ZONE<br><small>nxbingo.com</small></td>
+                            <td id="celula13">?</td>
+                            <td id="celula14">?</td>
+                        </tr>
+                        <tr>
+                            <td id="celula15">?</td>
+                            <td id="celula16">?</td>
+                            <td id="celula17">?</td>
+                            <td id="celula18">?</td>
+                            <td id="celula19">?</td>
+                        </tr>
+                        <tr>
+                            <td id="celula20">?</td>
+                            <td id="celula21">?</td>
+                            <td id="celula22">?</td>
+                            <td id="celula23">?</td>
+                            <td id="celula24">?</td>
+                        </tr>           
+                    </table>
+                    <br><br>
+                </section>
+            </main>
+            <section id="news" style="text-align: left; border-top: 0.1em solid #00ade8;">
+                <h3 id="hNews">News</h3>
+                <p><b>-</b> <span style="text-decoration: underline;">Jan 2nd, 2017</span>: the countdown to the Switch event is online!
+                    <br><b>-</b> <span style="text-decoration: underline;">Nov 18th, 2016</span>: six new options.
+                    <br><b>-</b> <span style="text-decoration: underline;">Nov 10th, 2016</span>: twelve new options. Navigation bar created.
+                    <br><b>-</b> <span style="text-decoration: underline;">Oct 26th, 2016</span>: two new options and one updated.
+                    <br><b>-</b> <span style="text-decoration: underline;">Oct 22th, 2016</span>: confirmed or disconfirmed options are now disabled.
+                    <br><b>-</b> <span style="text-decoration: underline;">Oct 20th, 2016</span>: Nintendo NX is now Nintendo Switch! <a href="https://youtu.be/f5uik5fgIaI" target="_blank">Check out the first look trailer.</a>
+                    <br><b>-</b> <span style="text-decoration: underline;">Oct 14th, 2016</span>: brazilian portuguese support and a bug fix.
+                    <br><b>-</b> <span style="text-decoration: underline;">Oct 12th, 2016</span>: three options updated and four added. "How to play" session created.
+                    <br><b>-</b> <span style="text-decoration: underline;">Oct 10th, 2016</span>: website opened!</p>
+            </section>
+            <section id="howto" style="text-align: left; border-top: 0.1em solid #00ade8;">
+                <h3 id="hHow">How to play</h3>
+                <p style="text-align: justify;">When a content within a cell of your card
+                    is confirmed with an official announcement, mark it as correct.
+                    In a real bingo game, the first player to match all cells in the same column, line
+                    or diagonal wins. Since this is just for fun, try to match all cells in your card
+                    and compare with your friends to confirm who got the greatest number of correct ones!
+                </p>
+            </section>
+            <footer>
+                <div id="share">
+                    <span st_url="http://www.nxbingo.com" class='st_facebook_large' displayText='Facebook'></span>
+                    <span st_url="http://www.nxbingo.com" class='st_twitter_large' displayText='Tweet'></span><br><br>
+                </div>
+                <div id="terms">
+                    <small>This website is a parody and it's not related to Nintendo nor its partners.</small><br>
+                    <small>There are no comercial nor gambling intentions with this page.</small><br><br>
+                </div>
+                <div id="dev">
+                    <small>Developed by</small><br>
+                    <small><a href="http://www.thalescastro.com/about" target="_blank">thalescastro.com</a></small><br><br>
+                </div>
+            </footer>
+        </div>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-85625201-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+        <script src="contador.js"></script>
+    </body>
+</html>
